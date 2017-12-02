@@ -1,0 +1,9 @@
+language: ruby
+
+script: ./bin/ci
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+sudo: false

@@ -1,0 +1,17 @@
+title: Julian Grosshauser
+url: https://juliangrosshauser.com
+twitter_username: jgrosshauser
+github_username:  juliangrosshauser
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - bin
+  - vendor
