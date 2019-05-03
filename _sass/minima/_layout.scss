@@ -63,8 +63,17 @@
 
 .footer-col {
   float: left;
-  margin-bottom: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+  margin-top: 12px;
+}
+
+.footer-col-1,
+.footer-col-2 {
+  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+  width:         calc(50% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-palm) {
@@ -72,6 +81,11 @@
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+
+  .footer-col-1 {
+    margin-top: 0;
+    margin-bottom: $spacing-unit;
   }
 }
 
