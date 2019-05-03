@@ -23,6 +23,9 @@ body {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 
@@ -35,6 +38,15 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * `main` element
+ */
+main {
+  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
 
@@ -82,7 +94,6 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font-family;
   font-weight: $base-font-weight;
 }
 
@@ -137,8 +148,7 @@ blockquote {
  */
 pre,
 code {
-  font-family: $monospace-font-family;
-  @include relative-font-size(0.9);
+  @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
   background-color: #eef;
@@ -156,16 +166,6 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0;
-  }
-}
-
-.highlight {
-  border-radius: 3px;
-
-  pre,
-  code {
-    font-size: $monospace-font-size;
-    background-color: transparent;
   }
 }
 
@@ -207,21 +207,48 @@ pre {
 /**
  * Icons
  */
-.icon > svg {
-  display: inline-block;
-  vertical-align: middle;
 
-  path {
-    fill: $grey-color;
-  }
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    fill: #{$grey-color};
+    padding-right: 5px;
+    vertical-align: text-top;
 }
 
 .social-media-list {
-  .icon {
-    padding-right: 5px;
-  }
-
   li + li {
     padding-top: 5px;
+  }
+}
+
+
+
+/**
+ * Tables
+ */
+table {
+  margin-bottom: $spacing-unit;
+  width: 100%;
+  text-align: $table-text-align;
+  color: lighten($text-color, 18%);
+  border-collapse: collapse;
+  border: 1px solid $grey-color-light;
+  tr {
+    &:nth-child(even) {
+      background-color: lighten($grey-color-light, 6%);
+    }
+  }
+  th, td {
+    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+  }
+  th {
+    background-color: lighten($grey-color-light, 3%);
+    border: 1px solid darken($grey-color-light, 4%);
+    border-bottom-color: darken($grey-color-light, 12%);
+  }
+  td {
+    border: 1px solid $grey-color-light;
   }
 }
