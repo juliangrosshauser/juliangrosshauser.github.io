@@ -14,8 +14,8 @@
 
     @include media-query($on-laptop) {
       text-align: center;
+    }
   }
-}
 }
 
 .site-title {
@@ -55,6 +55,12 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+
+  .wrapper {
+    @include media-query($on-laptop) {
+      padding-left: 30px;
+    }
+  }
 }
 
 .social-media-list {
