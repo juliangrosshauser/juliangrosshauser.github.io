@@ -3,8 +3,9 @@
 // Define defaults for each variable.
 
 $common-font-family:    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-family:      "Source Sans Pro", $common-font-family;
-$header-font-family:    "Lato", $common-font-family;
+$base-font-family:      "Nunito", $common-font-family;
+$header-font-family:    "Nunito", $common-font-family;
+$content-font-family:   "Open Sans", $common-font-family;
 $monospace-font-family: "Source Code Pro", monospace;
 $base-font-size:        16px !default;
 $monospace-font-size:   14px !default;
