@@ -1,14 +1,19 @@
-title: Julian Grosshauser
-author: Julian Grosshauser
+title: Julian's Blog
 url: https://juliangrosshauser.com
-twitter_username: jgrosshauser
-github_username:  juliangrosshauser
 
-markdown: kramdown
+author:
+  name: Julian Grosshauser
+  email: blog@juliangrosshauser.com
+
 theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+
+minima:
+  skin: custom
+  social_links:
+    twitter: jgrosshauser
+    github: juliangrosshauser
+
+show_excerpts: true
 
 defaults:
   - scope:

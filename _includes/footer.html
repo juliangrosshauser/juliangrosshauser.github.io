@@ -1,16 +1,40 @@
+{%- assign social = site.minima.social_links -%}
+
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        {%- include social.html -%}
+      <div class="footer-col">
+      {%- if site.author %}
+        <ul class="contact-list">
+          {% if site.author.name -%}
+            <li class="p-name">{{ site.author.name | escape }}</li>
+          {% endif -%}
+          {% if site.author.email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+        </ul>
+        <p class="feed-subscribe">
+          <a href="{{ 'feed.xml' | relative_url }}">
+            <svg class="svg-icon orange">
+              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg><span>Subscribe via RSS</span>
+          </a>
+        </p>
+      {%- endif %}
       </div>
-
-      <div class="footer-col footer-col-2">
-        <p>Copyright © {{ site.time | date: '%Y' }} {{ site.author }}. All rights reserved.</p>
-        <p>All source code included in the posts is licensed under the <a href="https://github.com/juliangrosshauser/juliangrosshauser.github.io/blob/master/LICENSE">MIT license</a>, unless otherwise stated.</p>
+      <div class="footer-col">
+        <ul class="social-list">
+          {%- if social.github -%}
+            <li><a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}"><svg class="svg-icon github"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>{{ social.github | escape }}</a></li>
+          {%- endif -%}
+          {%- if social.twitter -%}
+            <li><a rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }}"><svg class="svg-icon twitter"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg>{{ social.twitter | escape }}</a></li>
+          {%- endif -%}
+        </ul>
+        <p>Copyright © {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
       </div>
     </div>
 

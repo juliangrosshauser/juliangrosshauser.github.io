@@ -1,0 +1,101 @@
+/**
+ * Site header
+ */
+ .site-header {
+  border-top: 0;
+  margin-bottom: 30px;
+
+  .wrapper {
+    margin-top: 18px;
+  }
+}
+
+.site-title {
+  @include relative-font-size(1.8);
+  float: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.site-title-img {
+  margin-right: 20px;
+  margin-bottom: 14px;
+  border: 1px solid $border-color-02;
+  border-radius: 50%;
+
+  @include media-query($on-laptop) {
+    margin-right: 10px;
+  }
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  border-radius: 5px;
+  background-color: $inline-code-background-color;
+}
+
+pre {
+  padding: 20px 25px;
+}
+
+.highlight {
+  margin: 30px 0;
+  border-radius: 10px;
+
+  pre,
+  code {
+    background-color: transparent;
+  }
+}
+
+/**
+ * Page content
+ */
+.post-meta {
+  .dt-published {
+    padding-left: 3px;
+  }
+}
+
+/**
+ * Posts
+ */
+.post-title {
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-family: $content-font-family;
+}
+
+/**
+ * Site footer
+ */
+.social-list {
+  list-style: none;
+  margin-left: 0;
+
+  .svg-icon {
+    margin-right: 7px;
+
+    &.twitter {
+      color: $twitter-color;
+      padding: 0 0 2px 0;
+    }
+
+    &.github {
+      color: $github-color;
+      padding: 0 0 3px 0;
+    }
+  }
+}
+
+.feed-subscribe .svg-icon {
+  padding: 0 0 3px 0;
+  margin-right: 7px;
+}
